@@ -1,0 +1,118 @@
+.parent {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.item {
+    background-color: rgb(224, 222, 222);
+    padding: 1em;
+    font-size: .8rem;
+    line-height: 1.7;
+}
+
+.item:nth-child(1) {
+    font-size: 1.1rem;
+    grid-row: span 2;
+    display: grid;
+    align-content: center;
+}
+
+.green_box {
+    max-width: 900px;
+    height: 300px;
+    background-color: rgb(198, 250, 193);
+    margin: 0 auto 20px auto;
+    display: grid;
+}
+
+.center_me {
+    margin: auto;
+}
+
+.yellow_section {
+    display: grid;
+    grid-template-columns: minmax(auto, 900px);
+    justify-content: center;
+    background-color: rgb(255, 211, 130);
+    color: rgb(112, 86, 38);
+    line-height: 1.7;
+    padding: 20px;
+}
+
+.photo_ex {
+    display: grid;
+    max-width: 700px;
+    margin: 2em auto;
+
+    img {
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 100%;
+        display: block;
+    }
+
+    .overlay {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: end;
+        padding: .5em 1em 1em 1em;
+        background-color: rgba(41, 40, 40, 0.7);
+        
+        p {
+            color: #fff;
+        }
+    }
+}
+
+.layout_ex {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+.header {
+    background-color: rgb(8, 58, 19);
+    color: #fff;
+    padding: 1.2em;
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: rgb(121, 168, 115);
+    font-size: .9rem !important;
+    padding: 1.2em;
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+    padding: 1.2em;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(8, 58, 19);
+    padding: 1.2em;
+    color: #fff;
+}
+
+.responsive_ex {
+    max-width: 1100px;
+    margin: 1.2em auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); //Can use this instead of media queries
+    gap: 2em;
+}
+
+.responsive_item {
+    background-color: rgb(247, 195, 195);
+    padding: 1.2em;
+    line-height: 1.7;
+    font-size: 1rem;
+    overflow: auto;
+}
